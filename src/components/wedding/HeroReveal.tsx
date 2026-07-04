@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import coupleAsset from "@/assets/couple.jpg.asset.json";
 
 export default function HeroReveal() {
   const [revealed, setRevealed] = useState(false);
@@ -99,48 +100,38 @@ function CoupleIllustration() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] shadow-royal gold-border">
       <div className="absolute inset-0" style={{ background: "var(--gradient-pastel)" }} />
-      <svg viewBox="0 0 400 400" className="relative h-full w-full">
+      <img
+        src={coupleAsset.url}
+        alt="Dr. Yash & Dr. Shrishti"
+        className="relative h-full w-full object-cover"
+      />
+      {/* golden arch overlay */}
+      <svg viewBox="0 0 400 400" className="pointer-events-none absolute inset-0 h-full w-full" preserveAspectRatio="none">
         <defs>
-          <linearGradient id="brideGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="oklch(0.72 0.2 355)" />
-            <stop offset="100%" stopColor="oklch(0.42 0.16 10)" />
-          </linearGradient>
-          <linearGradient id="groomGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="oklch(0.55 0.14 260)" />
-            <stop offset="100%" stopColor="oklch(0.3 0.1 270)" />
-          </linearGradient>
-          <linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id="goldArch" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="oklch(0.92 0.1 90)" />
             <stop offset="100%" stopColor="oklch(0.68 0.16 80)" />
           </linearGradient>
         </defs>
-        {/* Backdrop mandap arch */}
-        <path d="M40,380 L40,180 Q40,60 200,60 Q360,60 360,180 L360,380 Z"
-          fill="none" stroke="url(#gold2)" strokeWidth="3" />
-        {/* Groom */}
-        <g transform="translate(140,220)">
-          <ellipse cx="0" cy="0" rx="34" ry="42" fill="oklch(0.78 0.06 60)" />
-          <path d="M-38,-20 Q0,-70 38,-20 L34,-6 Q0,-30 -34,-6 Z" fill="url(#groomGrad)" />
-          <circle cx="0" cy="-52" r="10" fill="url(#gold2)" />
-          <path d="M-40,40 L-50,140 L50,140 L40,40 Z" fill="url(#groomGrad)" />
-          <circle cx="0" cy="60" r="6" fill="url(#gold2)" />
-          <circle cx="0" cy="80" r="4" fill="url(#gold2)" />
-        </g>
-        {/* Bride */}
-        <g transform="translate(260,220)">
-          <ellipse cx="0" cy="0" rx="34" ry="42" fill="oklch(0.82 0.05 60)" />
-          <path d="M-40,-10 Q-30,-60 0,-60 Q30,-60 40,-10 L34,10 Q0,-20 -34,10 Z" fill="url(#brideGrad)" />
-          <circle cx="0" cy="-15" r="3" fill="url(#gold2)" />
-          <path d="M-50,40 L-70,150 L70,150 L50,40 Z" fill="url(#brideGrad)" />
-          {/* dupatta jewels */}
-          {[0,1,2,3,4].map(i => (
-            <circle key={i} cx={-40 + i*20} cy={60 + (i%2)*8} r="3" fill="url(#gold2)" />
-          ))}
-        </g>
-        {/* petals */}
-        {Array.from({length: 12}).map((_,i)=>(
-          <circle key={i} cx={30 + (i*33)%340} cy={20 + (i*17)%80} r="4"
-            fill={i%2 ? "oklch(0.75 0.14 85)" : "oklch(0.72 0.18 355)"} opacity="0.7"/>
+        <path
+          d="M20,395 L20,180 Q20,40 200,40 Q380,40 380,180 L380,395"
+          fill="none"
+          stroke="url(#goldArch)"
+          strokeWidth="2.5"
+          opacity="0.8"
+        />
+      </svg>
+      {/* petals */}
+      <svg viewBox="0 0 400 400" className="pointer-events-none absolute inset-0 h-full w-full">
+        {Array.from({ length: 10 }).map((_, i) => (
+          <circle
+            key={i}
+            cx={30 + (i * 41) % 340}
+            cy={15 + (i * 13) % 40}
+            r="3.5"
+            fill={i % 2 ? "oklch(0.75 0.14 85)" : "oklch(0.72 0.18 355)"}
+            opacity="0.85"
+          />
         ))}
       </svg>
     </div>
