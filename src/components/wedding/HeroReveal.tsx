@@ -39,9 +39,9 @@ export default function HeroReveal() {
           transition={{ duration: 1, delay: 0.3 }}
           className="my-8 flex items-center justify-center gap-4"
         >
-          <span className="font-script text-6xl text-gradient-royal sm:text-7xl">Yash</span>
+          <span className="font-script text-6xl text-gradient-royal sm:text-7xl">Dr.Yash</span>
           <span className="font-serif text-3xl text-royal-gold">&</span>
-          <span className="font-script text-6xl text-gradient-royal sm:text-7xl">Shrishti</span>
+          <span className="font-script text-6xl text-gradient-royal sm:text-7xl">Dr.Shrishti</span>
         </motion.div>
 
         <div className="mx-auto h-px w-24 bg-gold-gradient" />
@@ -73,7 +73,7 @@ export default function HeroReveal() {
               className="mx-auto mt-4 max-w-md"
             >
               <CoupleIllustration />
-              <p className="mt-4 font-script text-3xl text-gradient-royal">Yash & Shrishti</p>
+              <p className="mt-4 font-script text-3xl text-gradient-royal">Dr.Yash & Dr.Shrishti</p>
             </motion.div>
           )}
         </div>

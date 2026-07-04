@@ -84,7 +84,7 @@ export default function FamilyVenue() {
           className="mt-16 text-center"
         >
           <div className="mx-auto h-px w-24 bg-gold-gradient" />
-          <p className="mt-6 font-script text-4xl text-gradient-royal">Yash & Shrishti</p>
+          <p className="mt-6 font-script text-4xl text-gradient-royal">Dr.Yash&nbsp; &nbsp; Dr.Shrishti</p>
           <p className="mt-2 font-serif italic text-royal-maroon/70">
             Request the pleasure of your company · 22 July 2026
           </p>
