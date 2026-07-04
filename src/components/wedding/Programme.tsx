@@ -32,7 +32,7 @@ export default function Programme() {
           viewport={{ once: true }}
           className="mt-8 rounded-2xl bg-royal-gradient p-5 text-center shadow-royal"
         >
-          <p className="text-[11px] uppercase tracking-[0.3em] text-royal-gold-light">Please Note</p>
+          <p className="text-[11px] uppercase tracking-[0.3em] text-royal-gold-light">NOTE</p>
           <p className="mt-2 font-serif text-lg text-royal-cream sm:text-xl">
             ✦ Baraat will proceed from <span className="text-royal-gold-light">Ahinsha Circle</span> to the Wedding Venue ✦
           </p>
