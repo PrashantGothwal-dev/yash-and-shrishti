@@ -145,7 +145,7 @@ export default function EntryArch({ onOpen }: Props) {
               <div className="grid h-32 w-32 place-items-center rounded-full bg-gold-gradient shadow-gold">
                 <span className="font-script text-6xl text-royal-maroon">YS</span>
               </div>
-              <p className="mt-3 font-serif text-lg italic text-royal-maroon">Yash & Shrishti</p>
+              <p className="mt-3 font-serif text-lg italic text-royal-maroon">Dr.Yash & Dr.Shrishti</p>
             </motion.div>
           )}
         </AnimatePresence>
